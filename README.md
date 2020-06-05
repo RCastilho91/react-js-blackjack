@@ -52,5 +52,7 @@ The player will be declared the winner if their point total is higher than the d
 21! is a portfolio project to showcase JavaScript, CSS and React.js capabilities. It will have a short development cycle, featuring:
 
 **- V0:** a web-based, single page responsive application that'll cover all of the game dynamics described in item 3 of this document.
+
 **- V1:** a betting system will be added with fictional currency and counters of games played, games won will be added to every session so the player keeps track of their success.
+
 **- V2:** development of a React Native mobile application featuring the same capabilities.
