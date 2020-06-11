@@ -1,38 +1,65 @@
-.App {
+.container {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
+  position: relative;
   background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
+  height: 100vh;
+  width: 100vw;
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.game-area {
+  background-color: green;
+  width: 95vw;
+  margin: 0 auto;
+  border-radius: 80px;
+  /* margin: 0px 40px 0px 40px; */
+}
+
+.dealer-area, .player-area {
+  margin: 10px 20px 10px 20px;
+  height: 20vw;
+  border: 1px solid black;
+}
+
+.header {
+  padding-top: 30px;
+  padding-bottom: 60px;
+}
+
+.game-title, .game-sub-title {
+  display: block;
+  font-weight: bolder;
+}
+
+.game-title {
+  font-size: 300%;
+}
+
+.game-sub-title {
+  font-size: 200%;
+}
+
+.game-controls{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.game-controls :first-child {
+  margin-left: 0;
+}
+
+.control-button{
+  margin-left: 10px;
+  width: 240px;
+  border: 0px;
+  border-radius: 5px;
+  height: 50px;
+  color: white;
+  background-color: midnightblue;
+  font-weight: bolder;
+  font-size: 120%;
+}
+
+.control-button :hover {
+  background-color: #61dafb;
 }

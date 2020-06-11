@@ -1,58 +1,68 @@
-# 21! A Free Online Blackjack Application
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-A simple Blackjack game being developed with vanilla JavaScript for the functionalities, React.js for the front-end.
+## Available Scripts
 
-For the first release, this application will not feature a betting system. A React Native application will be developed in the future for smartphone app release, but will initially be a responsive application that can easily be played through a phone browser.
+In the project directory, you can run:
 
-## 1. The Rules of Blackjack
+### `npm start`
 
-Blackjack is played with a single deck of regular playing cards, excluding jokers, totaling 52 cards. It is played between two people: the player and the dealer (otherwise known as "the house").
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The objective is to draw cards that sum a total of 21 points, or as close to it as the player can. Any scores over 21 will result in a bust and the holder of said hand will be "bust", losing that game.
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
 
-## 2. Card valuation
-- Cards between 2 and 10 hold their numerical value, regardless of suit.
-- Jacks (J), Queens (Q) and Kings (K) are worth 10 points each, regardless of suit.
-- Aces can be worth either 1 or 11 points, regardless of suit.
+### `npm test`
 
-Aces are valued depending on the total points a player has at hand. If the player will be bust due to the sum of their cards' values, the aces in their hands will be progressively diminished in value so that doesn't happen.
+Launches the test runner in the interactive watch mode.<br />
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### 2.1. Example 1
-**Player's hand:** K, A
-**Player's hand value:** 21 (blackjack)
+### `npm run build`
 
-### 2.2. Example 2
-**Player's hand:** A, A
-**Player's hand value:** 12
+Builds the app for production to the `build` folder.<br />
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-In this case, if both aces were worth 11, player would go bust by having a 22-point total. Thus, one of the aces have their value diminished to 1 so that it doesn't happen.
+The build is minified and the filenames include the hashes.<br />
+Your app is ready to be deployed!
 
-### 2.3. Example 3
-**Player's hand:** K, A, 7
-**Player's hand value:** 18 (blackjack)
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-In this case, if the ace were worth 11, player would go bust by having a 28-point total. Ace's value is downgraded to 1 to favor them.
+### `npm run eject`
 
-## 3. Game dynamic
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-To start the game, each participant receives 2 cards. One of the dealer's cards is not revealed at first, while the other is. Both the player's cards are revealed at once.
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-The dealer verifies their hidden card. If the combination of the dealer's first two cards results in 21, the house wins, regardless of the player's hand.
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-If the dealer's hand does not add up to 21 from the start, the player decides if they want another card (a hit). If they do, a card will be dealt to them, and its value will be added to their total.
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-A player can decide to hit as many times as they would like, provided their total points do not go over 21. Once the player is satisfied, or feel it's too risky to draw another card, they may stand.
+## Learn More
 
-Once the player stands, the dealer will deal cards to themselves until they are equally satisfied and also stands. **In this application, dealer will stand whenever their result reaches 17 points or more.**
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-The player will be declared the winner if their point total is higher than the dealer's, or if the dealer goes bust (score greater than 21 points). A tie is possible if both the player and the dealer stand at the same total score.
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-## 4. Application development roadmap
+### Code Splitting
 
-21! is a portfolio project to showcase JavaScript, CSS and React.js capabilities. It will have a short development cycle, featuring:
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-**- V0:** a web-based, single page responsive application that'll cover all of the game dynamics described in item 3 of this document.
+### Analyzing the Bundle Size
 
-**- V1:** a betting system will be added with fictional currency and counters of games played, games won will be added to every session so the player keeps track of their success.
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-**- V2:** development of a React Native mobile application featuring the same capabilities.
+### Making a Progressive Web App
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+
+### Advanced Configuration
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+
+### Deployment
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+
+### `npm run build` fails to minify
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
