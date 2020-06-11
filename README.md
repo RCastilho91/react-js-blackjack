@@ -4,6 +4,8 @@ A simple Blackjack game being developed with vanilla JavaScript for the function
 
 For the first release, this application will not feature a betting system. A React Native application will be developed in the future for smartphone app release, but will initially be a responsive application that can easily be played through a phone browser.
 
+![](blackjack.gif)
+
 ## 1. The Rules of Blackjack
 
 Blackjack is played with a single deck of regular playing cards, excluding jokers, totaling 52 cards. It is played between two people: the player and the dealer (otherwise known as "the house").
