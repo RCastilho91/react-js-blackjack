@@ -192,27 +192,32 @@ function endGame(){
   }
 
   return (
-    <div className="App">
+    <div className="container">
 
-    <div className="game-area">
-      <div className="dealer-area">
-        <h1 className="dealer-score-tag">Dealer: { dealerScore }</h1>
-        <h2 className="dealer-score">{ dealerHand }</h2>
+      <div className="header">
+        <span className="game-title">21!</span>
+        <span className="game-sub-title">A free Blackjack web application</span>
       </div>
 
-      <div className="player-area">
-        <h1 className="player-score-tag">Player: { playerScore }</h1>
-        <h2 className="player-score">{ playerHand }</h2>
-      </div>
+      <div className="game-area">
+        <div className="dealer-area">
+          <h1 className="dealer-score-tag">Dealer: { dealerScore }</h1>
+          <h2 className="dealer-score">{ dealerHand }</h2>
+        </div>
 
-      <h1> { gameMessage } </h1>
-      <div className="game-controls">
-        <StandButton />
-        <HitButton />
-        <NewGameButton />
+        <div className="player-area">
+          <h1 className="player-score-tag">Player: { playerScore }</h1>
+          <h2 className="player-score">{ playerHand }</h2>
+        </div>
+
+        <h1> { gameMessage } </h1>
+        <div className="game-controls">
+          <StandButton />
+          <HitButton />
+          <NewGameButton />
+        </div>
       </div>
     </div>
-  </div>
   );
 }
 
