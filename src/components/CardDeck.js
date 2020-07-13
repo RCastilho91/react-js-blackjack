@@ -56,6 +56,10 @@ export default class CardDeck extends Component {
         }
       }
 
+      componentDidMount() {
+          this.cardDeckCreator();
+      }
+
       dealCard(){
         const cardIndex = Math.floor( Math.random() * cardDeck.length );
         const randomCard = this.state.cardDeck[ cardIndex ];
