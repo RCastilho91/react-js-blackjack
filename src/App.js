@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import { PlayerHand, DealerHand } from './components/Hands';
+import { NewGame, HitMe, Stand } from './components/Buttons';
 import CardDeck from './components/CardDeck';
 
 export default function App() {
@@ -12,6 +13,11 @@ export default function App() {
       </div>
       <div className="player-area">
           <PlayerHand />
+      </div>
+      <div className="game-controls">
+        <NewGame />
+        <HitMe />
+        <Stand />
       </div>
     </div>
   );

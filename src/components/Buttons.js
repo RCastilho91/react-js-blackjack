@@ -12,13 +12,7 @@ class NewGame extends Component {
         DealerHand().dealDealerCard();
     }
 
-    render() {
-        return(
-            <button className="control-button" onClick={ this.handleNewGame }>
-                New Game
-            </button>
-        );
-    }
+
 }
 
 class HitMe extends Component {
