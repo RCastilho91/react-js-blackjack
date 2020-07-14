@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { dealCard } from './CardDeck';
+import CardDeck from './CardDeck';
 
 class PlayerHand extends Component {
     constructor(props){
@@ -11,7 +11,7 @@ class PlayerHand extends Component {
     }
 
     dealPlayerCard() {
-        var newHand = [ ...this.state.hand, dealCard ];
+        var newHand = [ ...this.state.hand, CardDeck().dealCard() ];
         this.setState = {
             hand: newHand
         }
@@ -46,7 +46,7 @@ class DealerHand extends Component {
     }
 
     dealDealerCard() {
-        var newHand = [ ...this.state.hand, dealCard ];
+        var newHand = [ ...this.state.hand, CardDeck().dealCard() ];
         this.setState = {
             hand: newHand
         }

@@ -25,7 +25,7 @@ export default class CardDeck extends Component {
                                 Display: `${ cardNumericalValues[x] }${ cardSuits[y] }`,
                                 Hidden: true
                             };
-                this.state.push(gameCard);
+                this.state.cardDeck.push(gameCard);
             }
         }
     
@@ -61,7 +61,7 @@ export default class CardDeck extends Component {
       }
 
       dealCard(){
-        const cardIndex = Math.floor( Math.random() * cardDeck.length );
+        const cardIndex = Math.floor( Math.random() * this.state.cardDeck.length );
         const randomCard = this.state.cardDeck[ cardIndex ];
 
         this.state.cardDeck.splice( cardIndex, 1 );
