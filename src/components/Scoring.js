@@ -5,7 +5,14 @@ class PlayerScore extends Component {
         super(props);
 
         this.state = {
-            playerScore: 0
+            playerScore: 0,
+            playerStatus: 'play'
+        }
+    }
+
+    playerBust(){
+        this.setState = {
+            playerStatus: 'bust'
         }
     }
 
@@ -22,7 +29,14 @@ class DealerScore extends Component{
     constructor(props){
         super(props);
         this.state = {
-            dealerScore: 0
+            dealerScore: 0,
+            dealerStatus: 'play'
+        }
+    }
+
+    dealerBust() {
+        this.setState = {
+            dealerStatus: 'bust'
         }
     }
 
