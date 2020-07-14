@@ -1,11 +1,13 @@
 import { DealerScore, PlayerScore } from './Scoring';
+import CardDeck from './CardDeck';
+import { DealerHand } from './Hands';
 
 var dealer = DealerScore.state.dealerScore;
 var player = PlayerScore.state.playerScore;
 var dealerStatus = DealerScore.state.dealerStatus;
 var playerStatus = PlayerScore.state.playerStatus;
 
-export default function gameChecker(){
+function gameChecker(){
 
     var outcome =  null;
 
@@ -30,4 +32,19 @@ export default function gameChecker(){
     }
 
     return outcome
+
+}
+
+function dealerStands(){
+    while(dealer > 17) {
+        DealerHand.dealDealerCard()
+        gameChecker();
+    }
+
+    DealerScore.dealerStands();
+}
+
+export {
+    gameChecker,
+    dealerStands
 }
