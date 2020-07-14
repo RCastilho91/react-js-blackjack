@@ -45,7 +45,7 @@ class DealerHand extends Component {
         }
     }
 
-    dealPlayerCard() {
+    dealDealerCard() {
         var newHand = [ ...this.state.hand, dealCard ];
         this.setState = {
             hand: newHand
