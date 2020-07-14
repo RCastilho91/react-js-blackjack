@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import CardDeck from './CardDeck';
 import { PlayerHand, DealerHand } from './Hands';
-
+import { PlayerScore, DealerScore } from './Scoring';
 
 class NewGame extends Component {
 
@@ -33,7 +33,7 @@ class HitMe extends Component {
 class Stand extends Component {
 
     handleStand() {
-
+        alert( `Player score: ${ PlayerScore.state.playerScore }` )
     }
 
     render() {
