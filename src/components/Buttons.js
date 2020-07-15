@@ -6,10 +6,10 @@ import { PlayerScore, DealerScore } from './Scoring';
 class NewGame extends Component {
 
     handleNewGame() {
-        CardDeck().cardDeckCreator();
-        PlayerHand().dealPlayerCard();
-        PlayerHand().dealPlayerCard();
-        DealerHand().dealDealerCard();
+        new CardDeck().cardDeckCreator();
+        new PlayerHand().dealPlayerCard();
+        new PlayerHand().dealPlayerCard();
+        new DealerHand().dealDealerCard();
     }
 
     render() {
@@ -25,7 +25,7 @@ class NewGame extends Component {
 class HitMe extends Component {
     
     handleHitMe() {
-        PlayerHand().dealPlayerCard();
+        new PlayerHand().dealPlayerCard();
     }
     
     render() {
