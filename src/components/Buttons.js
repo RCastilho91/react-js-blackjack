@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { PlayerHand, DealerHand } from './Hands';
-import { PlayerScore, DealerScore } from './Scoring';
 var createCardDeck = require('./CardDeck').cardDeckCreator;
 var cardToDealer = require('./Hands').DealerHand.dealDealerHand;
 var cardToPlayer = require('./Hands').PlayerHand.dealPlayerHand;
@@ -51,7 +49,8 @@ class HitMe extends Component {
 class Stand extends Component {
 
     handleStand() {
-        alert( `Player score: ${ playerScore }` )
+        alert( `Player score: ${ playerScore }` );
+        alert(` Dealer score: ${ dealerScore }`);
     }
 
     render() {
