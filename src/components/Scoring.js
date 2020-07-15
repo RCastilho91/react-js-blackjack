@@ -22,6 +22,12 @@ class PlayerScore extends Component {
         }
     }
 
+    playerStarts() {
+        this.setState = {
+            playerStatus: 'play'
+        }
+    }
+
     render() {
         return(
             <div className="score">
@@ -49,6 +55,12 @@ class DealerScore extends Component{
     dealerStands() {
         this.setState = {
             dealerStatus: 'stand'
+        }
+    }
+
+    dealerStarts() {
+        this.setState = {
+            dealerStatus: 'play'
         }
     }
 

@@ -4,16 +4,20 @@ import { PlayerScore, DealerScore } from './Scoring';
 var createCardDeck = require('./CardDeck').cardDeckCreator;
 var cardToDealer = require('./Hands').DealerHand.dealDealerHand;
 var cardToPlayer = require('./Hands').PlayerHand.dealPlayerHand;
-var playerStatus = require('./Scoring').PlayerScore.state.playerStatus;
+var playerStarts = require('./Scoring').PlayerScore.playerStarts;
 var playerScore = require('./Scoring').PlayerScore.state.playerScore;
-var dealerStatus = require('./Scoring').DealerScore.state.dealerStatus;
-var dealerScore = require('.Scoring').DealerScore.state.dealerScore;
+var dealerStarts = require('./Scoring').DealerScore.dealerStarts;
+var dealerScore = require('./Scoring').DealerScore.state.dealerScore;
 
 
 class NewGame extends Component {
 
     handleNewGame() {
         createCardDeck();
+        
+        playerStarts();
+        dealerStarts();
+
         cardToPlayer();
         cardToPlayer();
         cardToDealer();
@@ -32,7 +36,7 @@ class NewGame extends Component {
 class HitMe extends Component {
     
     handleHitMe() {
-        new PlayerHand().dealPlayerCard();
+        cardToPlayer();
     }
     
     render() {
@@ -47,7 +51,7 @@ class HitMe extends Component {
 class Stand extends Component {
 
     handleStand() {
-        alert( `Player score: ${ PlayerScore.state.playerScore }` )
+        alert( `Player score: ${ playerScore }` )
     }
 
     render() {
