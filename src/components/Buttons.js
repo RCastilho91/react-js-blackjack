@@ -1,15 +1,22 @@
 import React, { Component } from 'react';
-import CardDeck from './CardDeck';
 import { PlayerHand, DealerHand } from './Hands';
 import { PlayerScore, DealerScore } from './Scoring';
+var createCardDeck = require('./CardDeck').cardDeckCreator;
+var cardToDealer = require('./Hands').DealerHand.dealDealerHand;
+var cardToPlayer = require('./Hands').PlayerHand.dealPlayerHand;
+var playerStatus = require('./Scoring').PlayerScore.state.playerStatus;
+var playerScore = require('./Scoring').PlayerScore.state.playerScore;
+var dealerStatus = require('./Scoring').DealerScore.state.dealerStatus;
+var dealerScore = require('.Scoring').DealerScore.state.dealerScore;
+
 
 class NewGame extends Component {
 
     handleNewGame() {
-        new CardDeck().cardDeckCreator();
-        new PlayerHand().dealPlayerCard();
-        new PlayerHand().dealPlayerCard();
-        new DealerHand().dealDealerCard();
+        createCardDeck();
+        cardToPlayer();
+        cardToPlayer();
+        cardToDealer();
     }
 
     render() {
